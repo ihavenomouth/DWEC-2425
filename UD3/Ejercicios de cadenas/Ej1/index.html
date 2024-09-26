@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios de cadenas</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <!-- <script  defer src="code.js"></script> -->
+</head>
+<body>
+  <h1>Ejercicio 1</h1>
+
+  <p><strong>Ejercicio1</strong>: Ve a la web <code>www.aliexpress.com</code> y abre la consola. Recupera la URL y reemplaza el primer .com por un .es y pásala a mayúsculas. ¿En qué posición empieza el último ES que aparece? </p>
+  <h2>Solución</h2>
+  <pre id="ej1sol">
+    //La URL es https://es.aliexpress.com/?gatewayAdapt=glo2esp
+    let u = location.href;
+    let pos = u.replace("com", "es").toUpperCase().lastIndexOf("ES");
+    console.log(`La posición del último ES es ${pos}`);
+  </pre>
+
+  <h1>Ejercicio 2</h1>
+  <p><strong>Ejercicio 2</strong>: partiendo de <code>"caca de la vaca"</code> crea una cadena que tenga un <code>-</code> entre cada letra. Es decir: <code>c-a-c-a- -d-e- -l-a- -v-a-c-a</code></p>
+  <h2>Solución</h2>
+  <pre id="ej2sol">
+    let s = "caca de la vaca";
+    s.replaceAll("","-").slice(1,-1);
+  </pre>
+
+
+
+  <h1>Ejercicio 3</h1>
+  <p><strong>Ejercicio 3</strong>: Partiendo del <code>navigator.userAgent</code> suma todos los números que aparecen en la cadena de caracteres.</p>
+  <p>Por ejemplo si el <code>userAgent</code> es <code>Firefox/117.0</code> el resultado será 9 (1+1+7+0).</p>
+  <p><strong>Nota</strong>: tal vez las funciones isNaN() y Number() puedan serte de utilidad.</p>
+  <h2>Solución</h2>
+  <pre id="ej3sol">
+    let userAgent = navigator.userAgent;
+    sol=0;
+    for(let i = 0; i&lt;userAgent.length;i++){
+      if( !isNaN( userAgent[i] )  ){
+        sol+=Number(userAgent[i]);
+      }
+    }
+    console.log("La solución es " + sol);
+  </pre>
+</body>
+</html>
