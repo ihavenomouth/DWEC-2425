@@ -1,0 +1,28 @@
+#divTexto{
+  position: relative;
+}
+
+.menu {
+  background-color: #000B;
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 10px;
+  display: inline-block;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.oculto{
+  display:none;
+  /* visibility: hidden; */
+  /* opacity: 0; */
+}
+
+.cursiva{
+  font-style: italic;
+}
+
+.negrita{
+  font-weight: bold;
+}

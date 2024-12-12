@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <script src="Ejercicio5a-1.js" defer></script>
+</head>
+<body>
+  <h1>Ejercicio 5a-1</h1>
+
+  <p><strong>Ejercicio 5a-1</strong>: Crea una web que contenga un formulario con dos radio button cuyo name sea <code>txtOpcion</code>:</p>
+
+  <ul>
+    <li>colores</li>
+    <li>animales</li>
+  </ul>
+
+<p>Usa el evento <code>change</code> para que si se selecciona colores, se muestren algunos nombres de colores en alguna parte de la web, pero si se selecciona animales se mostrarán algunos nombres de animales.</p>
+
+<p><strong>Pista</strong>: añade un <code>eventListener</code> con change a todos los radiobutton cuyo <code>name=txtOpcion</code>. En el código del <code>eventListener</code> puedes recuperar el <code>value</code> del que esté <code>:checked</code> o directamente recuperarlo con el atributo <code>value</code>.</p>
+
+<section>
+  <h2>Solución</h2>
+  <form>
+    <fieldset>
+      <legend>Opciones</legend>
+      <input type="radio" name="txtOpcion" value="colores" id="opcionColores">
+      <label for="opcionColores">Colores</label>
+      
+      <label>
+        <input type="radio" name="txtOpcion" value="animales">
+       Animales
+      </label>
+
+      </fieldset>
+  </form>
+
+  <div class="notice" id="divSolucion"></div>
+</section>
+
+</body>
+</html>
