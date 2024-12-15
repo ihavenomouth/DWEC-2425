@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <script defer src="code.js"></script>
+</head>
+<body>
+  
+  <h1>Ejercicios de eventos</h1>
+  
+  <h2>Ejercicio 5a-6</h2>
+  <p><strong>Ejercicio 5a-6</strong>: Crea una web que contenga esta división:
+    <pre>
+&lt;div id="ene" style="width:100px;height: 100px; background-color: aquamarine; position:absolute; top:200px; right:0px;"&gt;&lt;/div&gt;
+    </pre>
+    <p>A continuación añade este código JS:</p>
+    <pre>
+const ene = document.querySelector("#ene");
+let eneX = 0;
+
+const mueveEne =()=&gt;{
+  eneX++;
+  ene.style.right = eneX + "px";
+  requestAnimationFrame(mueveEne);
+};
+mueveEne();
+    </pre>
+
+    <p>Finalmente haz que cuando se haga click sobre la división se resetee la posición horizontal a la derecha del todo, que la posición vertical sea aleatoria entre 1 y 400 y que se suemen 50 puntos a la puntuación (que se mostrará en alguna parte de la web). Si quieres haz que la división se mueva más rápido cuando se haga click sobre ella. </p>
+
+    <div id="ene" style="width:100px;height: 100px; background-color: aquamarine; position:absolute; top:200px; right:100px;"></div>
+    
+    <p style="position:absolute;top:20px;right:200px;" id="pPuntos">0</p>
+
+</body>
+</html>

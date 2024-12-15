@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <script defer src="code.js"></script>
+</head>
+<body>
+  
+  <h1>Ejercicios de eventos</h1>
+  
+  <h2>Ejercicio 5a-5</h2>
+  <p><strong>Ejercicio 5a-5</strong>: Crea una web con un textbox en el que escribir un código postal. El código postal tiene que ser un número de 5 cifras y sus dos primeras cifras tienen que estar entre 01 y 52.</p>
+  En el momento en el que haya escrita 5 cifras se mostrará la provincia a la que pertenece ese código postal.
+  
+  <pre>
+    let arrProvincias = ["Álava","Albacete","Alicante","Almería","Ávila","Badajoz","Baleares",
+    "Barcelona","Burgos","Cáceres","Cádiz","Castellón","Ciudad Real","Córdoba","Coruña","Cuenca",
+    "Girona","Granada","Guadalajara","Guipuzcoa","Huelva","Huesca","Jaén","León","Lleida",
+    "Rioja","Lugo","Madrid","Málaga", "Murcia","Navarra","Orense","Asturias","Palencia","Las Palmas",
+    "Pontevedra","Salamanca","Tenerife","Cantabria","Segovia","Sevilla","Soria","Tarragona","Teruel",
+    "Toledo","Valencia","Valladolid","Vizcaya","Zamora","Zaragoza","Ceuta","Melilla"];
+  </pre>
+
+  <form>
+    <label>Código Postal: 
+      <input type="number" id="txtCP" />
+    </label>
+  </form>
+  <div id="divSolucion" class="notice"></div>
+
+</body>
+</html>

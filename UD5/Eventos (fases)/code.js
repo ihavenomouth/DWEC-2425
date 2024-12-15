@@ -11,12 +11,13 @@
 ///////////////
 
 function clickTodos(ev) { 
+  // ev.stopPropagation();
   console.log(ev.currentTarget);
 }
 
-document.getElementById("idEnlace").addEventListener('click', clickTodos);
-document.getElementById("idParrafo").addEventListener('click', clickTodos);
-document.getElementById("idDiv").addEventListener('click', clickTodos);
+document.getElementById("idEnlace").addEventListener('click', clickTodos, false);
+document.getElementById("idParrafo").addEventListener('click', clickTodos, false);
+document.getElementById("idDiv").addEventListener('click', clickTodos, false);
 
 
 
