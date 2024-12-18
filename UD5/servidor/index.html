@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="code.js"></script>
+</head>
+<body>
+  <h1>Formularios y diálogos</h1>
+  <button id="btnMostrar">Mostrar diálogo</button>
+
+<dialog id="dialogo">
+  <form method="POST" action="/formulario" id="frmTortilla">
+    <p>Una pregunta comprometida. La tortilla es mejor...</p>
+    
+    <label>
+      <input type="radio" name="radioTortilla" value="con cebolla" checked>
+      Con cebolla
+    </label>
+
+    <label>
+      <input type="radio" name="radioTortilla" value="sin cebolla">
+      Sin cebolla
+    </label>
+    <br>
+
+    <button>Enviar</button>
+    <button type="button" id="btnCerrar">Cerrar</button>
+  </form>
+</dialog>
+
+</body>
+</html>

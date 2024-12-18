@@ -3,14 +3,17 @@
 /////////////////////////
 // FUNCTION
 /////////////////////////
+
+
 const tratarDatos = arrDatos =>{
-
-
+  
   const divSolucion = document.querySelector("#divSolucion");
-
+  
   // for(let dato of arrDatos){
   //   divSolucion.innerHTML+= `<p>${dato.nombre}</p>`;
   // }
+
+
   let sol=`<table>
   </tr>
     <th id="thRed">Red social</th>
@@ -28,7 +31,19 @@ const tratarDatos = arrDatos =>{
 
   divSolucion.innerHTML = sol;
 
-  document.querySelector("")
+  document.querySelector("#thRed").addEventListener("click", e=>{
+    arrDatos.sort(  (red1,red2) => { 
+      return red1.nombre.localeCompare(red2.nombre, "es")  
+    });
+    console.log("Ordenamos por nombre");
+    tratarDatos(arrDatos);
+  });
+
+  document.querySelector("#thSeguidores").addEventListener("click", e=>{
+    arrDatos.sort(  (red1,red2) => red1.seguidores - red2.seguidores  );
+    console.log("Ordenamos por seguidores");
+    tratarDatos(arrDatos);
+  })
 
 }
 
@@ -37,7 +52,7 @@ const tratarDatos = arrDatos =>{
 /////////////////////////
 // MAIN
 /////////////////////////
-const arrDatos=[];
+let arrDatos; // El array donde almacenaremos los datos del fichero
 
 document.querySelector("#txtFile").addEventListener("change", 
   async (e) => {

@@ -19,6 +19,16 @@
       "url": "https://www.youtube.com/@julitamaria",
       "nombre": "Youtube",
       "seguidores": 511348
+    },
+    {
+      "url": "https://www.twitch.com/@julitamaria",
+      "nombre": "Twitch",
+      "seguidores": 36214
+    },
+    {
+      "url": "https://www.twitter.com/julitamaria",
+      "nombre": "Twitter (X)",
+      "seguidores": 35214
     }
   ]
 }

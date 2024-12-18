@@ -1,0 +1,30 @@
+dialog::backdrop{ background-color: #3366; }
+
+body{
+  max-width: 70rem;
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+h1{
+  font-weight: 400;
+}
+
+button{
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+  border: 2px solid navy;
+  background-color: #2266AA;
+  margin-top: 0.5rem;
+  min-width: 10rem;
+  color: white;
+  border-radius: 5px;
+  &:hover{
+    filter: brightness(1.2);
+    cursor: pointer;
+  }
+  &:active{
+    translate: 0px 2px;
+    filter: brightness(0.9);
+  }
+}

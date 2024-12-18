@@ -1,0 +1,62 @@
+*,::before, ::after{
+  box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Neuton:200,300,regular,italic,700,800);
+
+body{
+  max-width: 50rem;
+  margin-inline: auto;
+  font-family: 'Neuton',Arial, Helvetica, sans-serif;
+  padding:1rem;
+}
+
+h1, h2{
+  font-weight: 400;
+  background-color: rebeccapurple;
+  padding: 0.75rem;
+  color: white;
+}
+
+pre{
+  padding: 0.25rem;
+  background-color: aliceblue;
+}
+
+label:has(input){
+  background-color: rebeccapurple;
+  color:white;
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+  min-width: 10rem;
+  border-radius: 5px;
+  border: 2px solid navy;
+  &:hover{
+    filter:brightness(1.2);
+  }
+  &:active{
+    filter:brightness(0.9);
+  }
+}
+
+[type=file]{
+  display: none;
+}
+
+.solucion{
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  width:calc( 500px + 0.5rem);
+  background-color: rgb(99, 182, 255);
+  min-height: 2rem;
+  padding-inline:0.25rem;
+  padding-block:0.15rem;
+}
+
+p.barra{
+  background-color:rebeccapurple;
+  color:white;
+  font-size: 0.75rem;
+  font-weight: 900;
+  margin-block: 0.1rem;
+}
