@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <script src="code.js" defer></script>
+</head>
+<body>
+  <h1 id="titulo">Formulario</h1>
+  <form id="frmRegistro" action="registro.php" method="get">
+
+    <input  class="oculto" type="hidden" name="edad" value="32"></input>
+
+    <label for="nombre">Nombre: </label>
+    <input type="text" name="nombre">
+    <br>
+    <label for="lastname">Apellido: </label>
+    <input type="text" name="apellido"  >
+    <br>
+    <label for="email">Email: </label>
+    <input type="email" name="email"  >
+    <br>
+    <label for="password">Password: </label>
+    <input type="password" name="password"  >
+    <br>
+    <input type="time">
+    <input type="submit" value="Registrarse">
+  </form>
+</body>
+</html>

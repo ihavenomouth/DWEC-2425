@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <title>Document</title>
+  <script src="code.js" defer></script>
+</head>
+<body>
+  <h1>Ejercicio 2</h1>
+  
+<p><strong>Ejercicio 2</strong>: Crea una web que contenga un botón, una división y tres checkbox (mañana, tarde, noche) y al pulsar el botón se procederá así:</p>
+<ul>
+  <li>comprobará que al menos una de las opciones está marcada y como máximo estarán marcadas dos.</li>
+  <li>si todo es correcto mostrará en la división las opciones seleccionadas</li>
+  <li>si no hay seleccionada ninguna opción o están marcadas todas, se mostrará un mensaje de error en la división</li>
+</ul>
+
+<h2>Solución</h2>
+
+<form id="frmTurno">
+  <fieldset>
+    <legend>Selecciona el turno</legend>
+    <p id="pDescripción">Como máximo se pueden seleccionar dos opciones y como mínimo una única opción.</p>
+    
+    <label>  
+      <input aria-describedby="pDescripción" type="checkbox" value="mañana"> Mañana
+    </label>
+
+    <label>  
+      <input aria-describedby="pDescripción" type="checkbox" value="tarde"> Tarde
+    </label>
+    
+    <label>  
+      <input aria-describedby="pDescripción" type="checkbox" value="noche"> Noche
+    </label>
+  </fieldset>
+  <button>Aceptar</button>
+</form>
+
+<div id="divSolucion" class="notice"></div>
+
+
+<h2>Borrar</h2>
+<form id="frm">
+  <input id="txtNombre" type="text" pattern="j[123][ab] " >
+  <button type="button" id="btnAceptar">Aceptar</button>
+</form>
+
+</body>
+</html>
