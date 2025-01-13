@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <script src="code.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Validar formularios</h1>
+  <form id="frmEnviar">
+    
+    <label>Nombre<br>
+      <input type="text" name=" " id="txtNombre" maxlength="5" pattern="^[aeiou][0-9]+" title="El nombre debe empezar con una vocal seguida de números">
+    </label>
+
+    <br>
+
+    <label>Edad (valores válidos: entre 18 y 60 año)<br>
+      <input type="number" name="txtEdad" id="txtEdad" min="18" max="60">
+    </label>
+
+    <br>
+
+    <label>Dato (requerido)<br>
+      <input type="number" name="txtDato" id="txtDato" required>
+    </label>
+
+
+    <div id="divErrores" class="errores"></div>
+
+    <br>
+    <button type="button" id="btnEnviar">Enviar</button>
+  </form>
+
+
+</body>
+</html>

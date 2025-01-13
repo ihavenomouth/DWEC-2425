@@ -1,0 +1,44 @@
+Ejercicio 1 de expresiones regulares
+------------------------------------
+
+/^[0-9][0-9]-[aeiou]/.test("38-uas")
+
+Nota: El ejercicio dice que empiecen por dos dígitos, guión y una letra, pero puede terminar ahí o no.
+
+
+
+Ejercicio 2 de expresiones regulares
+------------------------------------
+
+/^[0-9]{8}-?[a-z]$/i.test("34678678-G")
+
+Nota: para que no distinga mayúsculas de minúsculas se indica con la i en la expresión regular /___/i (de ignore case)
+
+Otras opciones válidas serían:
+Sin usar el ignore-case
+/^[0-9]{8}-?[a-zA-Z]$/.test("34678678-G")
+
+Con dos expresiones, una con - y otra sin él:
+/^[0-9]{8}-[a-zA-Z]$|^[0-9]{8}[a-zA-Z]$/.test("34678678-G")
+
+
+
+Ejercicio 3 de expresiones regulares
+------------------------------------
+
+function checkPassword( p ){
+
+  //8 caracteres exactamente
+  if(p.length != 8) return false;
+  /// Empieza por i
+  if(p[0] !== "i" ) return false;
+  // Termina con dígito
+  if( ! /[0-9]$/.test(p)  ) return false;
+
+  //Si no contiene minúsculas
+  if( /[^a-z]/.test(p) ) return false;
+  //Si no contiene mayúsculas
+  if( /[^A-Z]/.test(p) ) return false;
+
+  return true;
+}
