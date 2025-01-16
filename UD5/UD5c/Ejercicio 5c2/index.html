@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <h1>Ejercicio 5c - 2</h1>
+
+  <p><strong>Ejercicio 2</strong>: Crea una web que use tailwind a partir de un CDN. Según la documentación inicial (<a href="https://tailwindcss.com/docs/installation/play-cdn">https://tailwindcss.com/docs/installation/play-cdn</a>), esto se consigue añadiendo al &lt;head&gt; la siguiente línea.</p>
+
+  <pre>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</pre>
+      
+  <p>En tu web habrá una etiqueta <code>&lt;p id="parrafo"&gt;Hola caracola&lt;/p&gt;</code> y un formulario con un textbox y dos botones: <em>Añadir</em> y <em>Eliminar</em>.</p>
+  
+  <p>Cada vez que se pulse <em>Añadir</em>, se añadirá al párrafo la clase de tailwind que el usuario haya indicado en el textbox.</p>
+  
+  <p>Cada vez que se pulse <em>Eliminar</em>, se eliminará del párrafo la clase de tailwind que el usuario haya indicado en el textbox.</p>
+    
+  <p>Ejemplos de clases para probar:</p>
+
+  <pre>
+    p-2
+    m-5
+    bg-indigo-200
+    w-1/2
+    border-solid border-2 border-indigo-500
+    drop-shadow-lg
+  </pre>
+    
+  <h2>Solución</h2>
+  <form class="m-4 p-4 bg-indigo-200">
+    <input type="text" id="txtClase" class="p-2 border-2 border-indigo-500">
+    <br>
+    <button id="btnAdd" class="mt-4 border-2 p-2 border-black">Añadir</button>
+    <button id="btnRemove"  class="mt-4 border-2 p-2 border-black">Eliminar</button>
+  </form>
+  <p id="parrafo">Hola caracola</p>
+</body>
+</html>
