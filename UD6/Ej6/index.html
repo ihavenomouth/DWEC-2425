@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <script src="code.js" defer></script>
+</head>
+<body>
+  <h1>Ejercicio 6</h1>
+  <p>Ejercicio 6: Partiendo de la lista de alumnos de abajo crea una tabla con dos columnas usando únicamente métodos de manipulación del DOM.</p>
+  <p>La tabla se creará al pulsar un botón de crear tabla.</p>
+  
+  <p>Parte de esta lista de alumnos:</p>
+  
+  <ul>
+    <li>Tomás Tuerzo</li>
+    <li>Aitor Tilla</li>
+    <li>Sara Mago</li>
+    <li>Pancho Colate</li>
+    <li>Ana Tema</li>
+  </ul>
+  
+  
+  <p>Añade un formulario con dos cuadros de texto (nombre y apellido) y un botón que permita añadir un elemento a la lista y a la tabla simultáneamente como último elemento.</p>
+  
+  <p>Añade un checkbox para indicar si se quiere añadir el nuevo alumno al final de la lista/tabla.</p>
+  
+  <p>Añade un manejador de evento delegado en la lista que permita que al hacer click sobre un elemento se coloque el primero.</p>
+  
+  <p>Añade un manejador de evento delegado en la tabla que permita que al hacer click sobre una fila de la tabla que contenga datos (no la cabecera) cree un clon y lo añada al final de la misma.</p>
+
+  <h2>Solución</h2>
+  <form>
+    <label for="txtNombre">Nombre</label>
+    <input type="text" name="txtNombre" id="txtNombre">
+    <label for="txtApellido">Apellido</label>
+    <input type="text" name="txtApellido" id="txtApellido">
+    <br>
+    <label>
+      <input type="checkbox" name="chkAlFinal" id="chkAlFinal">
+      Añadir al final (si se marca se añadirá como último elemento, si no se marca se añadirá como primer elemento)
+    </label>
+    <br>
+    <button type="button" id="btnAnadirAlumno">Añadir alumno</button>
+    <button type="button" id="btnCreartabla">Crear tabla</button>
+  </form>
+  <ul class="listaAlumnos">
+    <li>Tomás Tuerzo</li>
+    <li>Aitor Tilla</li>
+    <li>Sara Mago</li>
+    <li>Pancho Colate</li>
+    <li>Ana Tema</li>
+  </ul>
+</body>
+</html>

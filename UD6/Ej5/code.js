@@ -85,30 +85,52 @@ document.querySelector("#btnOrdenar").addEventListener("click", e=>{
 //3.- Filtramos la tabla para que aparezcan sólo los alumnos cuyo
 //    nombre empiece por lo que haya en el textbox
 document.querySelector("#btnFiltrar").addEventListener("click", e=>{
-  //Seleccionamos el tbody y recuperamos el filtro
+  //1.- Seleccionamos el tbody y recuperamos el filtro
   let tbody = document.querySelector("table tbody");
   const filtro = document.querySelector("#txtFiltrar").value;
 
-  if(!filtro){
+  if(!filtro){ //si no se indicó nada para filtrar, salimos de la función
     return;
   }
 
-
+  //2.- Convertimos el HTMLCollection con las filas del tbody en un Array
+  //    y usamos el método filter para quedarnos sólo con las filas que cumplan
+  //    el filtro
   let filas = Array.from(tbody.children).filter( fila =>{
     //el primer hijo de la fila <tr> es el primer <td> 
     return fila.firstElementChild.innerText.startsWith(filtro)
   });
 
-  console.log(filas);
+  // console.log(filas);
 
-  //Eliminamos todas las filas del tbody
-  //Nota: las recorremos desde el final hasta el principio para no tener
-  //problemas con los índices al eliminarlos
-  for(let i=tbody.children.length;i>0;i--){
-    tbody.children[i-1].remove()
-  }
+  //3.- Eliminamos todas las filas del tbody
 
-  //Añadimos sólo las filas que cumplen el filtro
+  // Nota: las recorremos desde el final hasta el principio para no tener
+  // problemas con los índices al eliminarlos
+  //  for(let i=tbody.children.length;i>0;i--){
+  //    tbody.children[i-1].remove()
+  //  }
+  
+  //Otra manera de eliminar los hijos del tbody:
+  //while (tbody.firstChild) {
+  //  tbody.removeChild(tabla.firstChild);
+  //}
+
+  //Otra manera más de eleiminarlas:
+  //const filas = tabla.querySelectorAll('tr');
+  //filas.forEach(fila => fila.remove());
+
+  //Otra manera:
+  //tbody.replaceChildren();
+
+  // Otra solución para eliminar las filas del tbody: eliminar el tbody, crear 
+  // uno nuevo (vacío) y añadirlo a la tabla 
+  tbody.remove();
+  tbody = document.createElement("tbody");
+  const table = document.querySelector("table"); // recuperamos nuestra tabla
+  table.append(tbody);
+
+  //4.- Añadimos sólo las filas que cumplen el filtro
   filas.forEach(fila => {
     tbody.appendChild(fila);
   });

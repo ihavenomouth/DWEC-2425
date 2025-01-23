@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="code.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Ejercicio 4</h1>
+
+  <p><strong>Ejercicio 4</strong>: Crea una web con tres listas sin ordenar y un par de radio buttons.</p>
+  <p>La primera lista tendrá una serie de nombres de alumnos. La segunda tendrá una serie de alumnos aprobados y la tercera alumnos suspensos.</p>
+  <p>Las opciones del radio button serán dos: aprobado y suspenso.</p>
+  <p>Si se pulsa sobre un alumno de la primera lista y está seleccionada la opción aprobado, se moverá a la lista de aprobados como último elemento.</p>
+  <p>Si se pulsa sobre un alumno de la primera lista y está seleccionada la opción suspenso, se moverá a la lista de suspensos como primer elemento.</p>
+  <p>Finalmente si se pulsa sobre un alumno de la lista de suspenso, volverá a la primera lista de alumnos.</p>
+  
+  <p>Parte de esta lista de alumnos:</p>
+  
+  <ul class="listaAlumnos" id="listaAlumnos">
+    <li>Tomás Tuerzo</li>
+    <li>Aitor Tilla</li>
+    <li>Sara Mago</li>
+    <li>Pancho Colate</li>
+    <li>Ana Tema</li>
+    <li>Armando Bronca</li>
+    <li>Aitor Menta</li>
+  </ul>
+
+  <h2>Solución</h2>
+  <form>
+    <fieldset>
+      <legend>Aprobado/suspenso</legend>
+      <label>
+        <input type="radio" name="radioSuspenso" value="suspenso" checked> Suspenso
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="radioSuspenso" value="aprobado"> Aprobado
+      </label>
+    </fieldset>
+  </form>
+  
+  <div class="listas">
+    <div>
+      <h2>Aprobados</h2>
+      <ul class="listaAlumnos" id="listaAprobados"></ul>
+    </div>
+    <div>
+      <h2>Suspensos</h2>
+      <ul class="listaAlumnos" id="listaSuspensos"></ul>
+    </div>
+  </div>
+</body>
+</html>
