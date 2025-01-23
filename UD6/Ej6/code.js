@@ -108,7 +108,7 @@ const anadirAlumno = () =>{
 const anadirEventoDelegadoTabla = () =>{
   // Evento delegado de la tabla
   if(tablaAlumnos){
-    tablaAlumnos.addEventListener("click", e=>{
+    tablaAlumnos.lastElementChild.addEventListener("click", e=>{
       if(e.target.tagName=="TD"){
         //tablaAlumnos.lastElementChild es el tbody de la tabla
         tablaAlumnos.lastElementChild.prepend(e.target.parentElement);
