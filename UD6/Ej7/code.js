@@ -20,8 +20,12 @@ document.querySelector("#btnAnadir").addEventListener("click", e=>{
   const li = document.createElement("li");
   li.innerText = tarea;
   li.dataset.completada = "false";
+  li.style.userSelect = "none"; //evita que se pueda seleccionar el texto
+  li.style.cursor = "pointer";
 
   listaTareas.append(li);
+
+  guardarTareasEnLocalStorage();
 });
 
 
@@ -39,10 +43,12 @@ listaTareas.addEventListener("click", e=>{
       e.target.style.textDecoration = "line-through 2px red";
     }
   }
+  guardarTareasEnLocalStorage();
 });
 
+
 // 3.- Añadimos la funcionalidad de guardar las tareas
-document.querySelector("#btnGuardar").addEventListener("click", e=>{
+const guardarTareasEnLocalStorage = () =>{
   //Recorremos los <li> de la lista y los guardamos en el localStorage
   const arrTareas = [];
 
@@ -55,5 +61,34 @@ document.querySelector("#btnGuardar").addEventListener("click", e=>{
     );
   }
   localStorage.setItem("arrTareas", JSON.stringify(arrTareas));
+};
+
+
+//4.- Añadimos la funcionalidad de recuperar las tareas
+document.querySelector("#btnRecuperar").addEventListener("click", e=>{
+  // Recuperamos el array de tareas almacenado
+  const arrTareas = JSON.parse(localStorage.getItem("arrTareas"));
+  if(!arrTareas){
+    alert("No hay tareas almacenadas");
+    return;
+  }
+
+  //Eliminamos todos los hijos
+  listaTareas.replaceChildren();
+
+  for (let tarea of arrTareas){
+    const li = document.createElement("li");
+    li.innerText = tarea.texto;
+    li.dataset.completada = tarea.completada;
+    
+    if(tarea.completada == "true"){    
+      li.style.textDecoration = "line-through 2px red";
+    }
+
+    li.style.userSelect = "none"; //evita que se pueda seleccionar el texto
+    li.style.cursor = "pointer";
+  
+    listaTareas.append(li);
+  }
 });
 

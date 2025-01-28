@@ -1,0 +1,17 @@
+#galeria{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  div{
+    border-radius: 20px;
+    cursor: pointer;
+    width: 150px;
+  }
+}
+
+aside{
+  float:none;
+  width: 100%;
+  margin-bottom: 3rem;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="code.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Ejercicio 10</h1>
+  <p><strong>Ejercicio 10</strong>: Crea un power ranking con funciones del DOM. La web debe contener una división <code>&lt;div id="listado"&gt;</code>, un cuadro de texto y un botón, cuando se pulse el botón se añadirá un párrafo dentro de la división con el contenido del cuadro de texto.</p>
+
+  <p>Además habrá, un checkbox con dos opciones, arriba y abajo. Cuando se pulsa sobre uno de los párrafos se moverá arriba o abajo en función de la opción elegida en el checkbox.</p>
+    
+  <p><strong>Ampliación</strong>: Investiga cómo hacerlo usando eventos de drag & drop, de manera que puedas arrastrar y soltar los párrafos en las zonas que lo permitan. </p>
+
+  <h2>Solución</h2>
+  <form>
+    <label for="txtDato">Dato a añadir:</label>
+    <input type="text" id="txtDato">
+    <button id="btnAnadir" type="button">Añadir</button>
+    <p id="pDescripcion">Si el <em>checkbox</em> de abajo está seleccionado, al pulsar sobre un párrafo lo moveremos hacia arriba. Si no está seleccionado, se moverá hacia abajo.</p>
+    <label>
+      <input type="checkbox" id="chkArriba" aria-describedby="pDescripcion"> Mover hacia arriba
+    </label>
+  </form>
+  <div id="listado" class="notice"></div>
+
+  <p></p>
+  <p></p>
+  <p></p>
+</body>
+</html>
