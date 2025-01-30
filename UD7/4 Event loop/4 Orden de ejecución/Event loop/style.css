@@ -1,0 +1,23 @@
+strong{
+  color: var(--accent-hover);
+}
+
+.pila-container{
+  max-width: 20rem;
+  
+  text-align: center;
+  margin: 1rem;
+}
+
+#pila{
+  border: 1px solid var(--accent-hover);
+  display:flex;
+  flex-direction: column-reverse;
+  min-height: 12rem;
+  gap: 0.2rem;
+}
+
+#pila >div{
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--accent-bg);
+}

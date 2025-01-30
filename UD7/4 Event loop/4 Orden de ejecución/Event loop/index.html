@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event loop</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <script src="code.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Event loop</h1>
+
+  <p>Para entender el <em>Event loop</em>, debemos empezar comprendiendo que Javascript es un lenguaje que cuenta con <strong>un único hilo de ejecución</strong> (sólo se puede ejecutar instrucciones de una en una) que puede ser bloqueado si no somos cuidadosos. <br>
+  Esto es posible porque Javascript por defecto es un lenguaje de programación <strong>síncrono</strong> (aunque permite usar técnicas de programación asíncrona como promesas).</p>
+
+  <p>Los botones de abajo bloquearán el único hilo de ejecución de Javascript mediante bucles infinitos, bucles intensivos o desbordamientos de pila por recursividad.</p>
+
+  <form>
+    <button type="button" id="btnBloqueoTotal">Iniciar bloqueo total</button>
+    <br>
+    <button type="button" id="btnBloqueo5seg">Iniciar bloqueo 5 segundos</button>
+    <br>
+    <button id="btnStackOverflow">Stack overflow</button>
+  </form>
+
+  <p>Para evitar estos bloqueos se pueden usar técnicas como dividir las tareas pesadas en partes usando <code>setTimeOut()</code>, <code>setInterval()</code> o Web workers, además de usar técnicas de programación asíncrona.</p>
+  
+  <h2>El stack</h2>
+
+  <p>El <strong>stack o pila de ejecución</strong> es una característica común a la mayoría de los lenguajes de programación y es lo que permite ejecutar funciones.</p>
+
+  <p>Cuando se ejecuta una instrucción como por ejemplo <code>console.log("Javier Mancera");</code> la instrucción se coloca en la pila de ejecución y se saca cuando se termina de ejecutar.</p>
+
+  <p>Si la ejecución de una instrucción llama a una función que a su vez llama a otras funciones, el funcionamiento de la pila es algo más complejo.<br>
+  Pensemos en el código de abajo ¿Cómo iría evolucionando la pila?</p>
+
+  <pre>
+function multiplicar(a, b){
+  return a*b;
+}
+
+function cuadrado(n){
+  return multiplica(n, n);
+}
+
+function calcularCuadrado(numero){
+  let cuad = cuadrado(numero);
+  console.log( cuad );
+}
+
+calcularCuadrado(5);
+  </pre>
+
+  <h3>La evolución de la pila</h3>
+
+  <p id="pExplicacion">Al principio la pila estará vacía.</p>
+
+  <div class="pila-container">
+    <div id="pila"></div>
+    Stack
+  </div>
+
+  <form>
+    <button type="button" id="btnSiguientePaso">Siguiente paso</button>
+  </form>
+
+  <h2>Tasks y microtasks</h2>
+  <p>Todas estas instrucciones se han ejecutado de manera síncrona.</p>
+  <p>Veamos algún ejemplo de asíncronía, por ejemplo entendiendo cómo se gestionan las llamadas a <code>setTimeout()</code>.</p>
+  <p>Esta función en realidad llama a una de las API del navegador que genera un temporizador (<code>Timer</code>).</p>
+</body>
+</html>
