@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <script src="code.js" defer></script>
+</head>
+<body>
+  <h1>Ejercicio 4</h1>
+  <p><strong>Ejercicio 4:</strong> Usando la API Fetch, muestra en un documento HTML bien presentado la información que devuelve las siguientes llamadas a una API</p>
+
+  <ul>
+    <li>https://mocktarget.apigee.net/xml (devuelve un documento XML que habrá que parsear)</li>
+    <li>https://mocktarget.apigee.net/iloveapis (devuelve HTML)</li>
+    <li>https://mocktarget.apigee.net/json (devuelve un objeto JSON)</li>
+  </ul>
+
+
+  <p>Para el primer y tercer apartado utiliza async/await, para el segundo utiliza then/catch.</p>
+
+  <p><strong>Otros ejemplos:</strong> https://apidocs.apigee.com/docs/mock-target/1/routes/xml/get</p>
+
+  <p><strong>Opcional:</strong> Usa la llamada de abajo que permite indicar el nombre de un usuario como parámetro.</p>
+  <p>https://apidocs.apigee.com/docs/mock-target/1/routes/user/get </p>
+
+  <h2>Solución</h2>
+  <form>
+    <button type="button" id="btnPrimeraAPI">Primera API</button>
+    <button type="button" id="btnSegundaAPI">Segunda API</button>
+    <button type="button" id="btnTerceraAPI">Tercera API</button>
+  </form>
+  <div class="notice" id="divResultado"></div>
+</body>
+</html>

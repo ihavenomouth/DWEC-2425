@@ -20,6 +20,9 @@ const paso1 = (callback) =>{
   }, 1000);
 }
 
+
+
+
 const paso2 = (callback) =>{
   setTimeout( ()=> {
     imprimeResultado("Paso 2: Prepara la mezcla de 4 huevos y 1 taza de azúcar");
@@ -63,22 +66,22 @@ const llamaPasos = callback =>{
   // Fíjate que aunque ejecutemos las peticiones en el orden correcto, 
   // cada una tarda un tiempo diferente y el orden en el que se devuelven
   // los pasos a realizar es incorrecto
-  paso1();
-  paso2();
-  paso3();
-  paso4();
-  paso5();
+  // paso1();
+  // paso2();
+  // paso3();
+  // paso4();
+  // paso5();
 
   // Conseguir sincronía con callbacks (problema de callback hell)
-  // paso1( ()=>{
-  //   paso2( ()=>{
-  //     paso3( ()=>{
-  //       paso4( ()=>{
-  //         paso5();
-  //       });
-  //     });
-  //   });
-  // });
+  paso1( ()=>{
+    paso2( ()=>{
+      paso3( ()=>{
+        paso4( ()=>{
+          paso5();
+        });
+      });
+    });
+  });
 
 }
 

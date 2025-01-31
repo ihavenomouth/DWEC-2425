@@ -66,7 +66,7 @@ const paso4 = () =>{
   return new Promise((resolve, reject) =>{
     setTimeout( ()=> {
       //Se realiza la petición al servidor que devuelve el paso y si se realizó correctamente
-      const {ok, respuesta} = {ok: false, respuesta:"Paso 4: Hornea el molde 25 minutos"};
+      const {ok, respuesta} = {ok: true, respuesta:"Paso 4: Hornea el molde 25 minutos"};
 
       if(ok)
         resolve(respuesta);
@@ -173,6 +173,9 @@ const llamaPasos = () =>{
 }
 
 
+
+
+
 // Con async/await
 const llamaPasosAsync = async () =>{
   try{
@@ -201,7 +204,7 @@ const divResultado = document.querySelector("#divResultado");
 
 document.querySelector("#btnAccion").addEventListener('click', e=>{
   divResultado.innerHTML = "";
-  llamaPasos();
-  // llamaPasosAsync();
+  // llamaPasos();
+  llamaPasosAsync();
 });
 
