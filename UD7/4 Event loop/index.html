@@ -76,6 +76,7 @@ function f(){
   setTimeout( ()=>{console.log("2");}, 100);
   console.log("3");
 }
+f();
 </pre>
 
   <p>¿En qué orden se mostrarán los mensajes en la consola? De manera intuitiva veremos que se mostrará <code>1, 3, 2</code>. ¿Pero qué pasará si cambiamos el tiempo de espera del temporizador a 0?</p>
@@ -86,6 +87,7 @@ function f(){
   setTimeout( ()=>{console.log("2");}, 0);
   console.log("3");
 }
+f();
 </pre>
 
 <form>
@@ -95,6 +97,35 @@ function f(){
 
   <p>¿Por qué ocurre esto? Para entenderlo debemos comprender que el <code>setTimeout</code> nos genera una <strong>macrotask</strong>, una tarea de baja prioridad que se ejecutará cuando la pila de ejecución (la stack de la que hablábamos al principio) esté vacía.</p>
 
+  <p>Técnicamente, el <code>setTimeout</code> se ejecuta en la <strong>call stack</strong> y realiza una llamada a la <code>API Timer</code> del navegador, que crea la tarea (la macrotask) que se añadirá a una cola llamada <strong>macrotask queue</strong> y a veces <strong>callback queue</strong> (porque en realidad lo que se coloca como tarea pendiente en la cola es la ejecución del callback del <code>setTimeout</code>).</p>
+
+  <h3>La evolución de la pila y la cola</h3>
+
+  <p id="pExplicacionMacrotask">Al principio la pila estará vacía.</p>
+
+  <div class="macrotask-grid">
+    <div class="macrotask-pila-container">
+      <div id="pila2"></div>
+      Stack
+    </div>
+    <div class="macrotask-cola-container">
+      <div id="cola2"></div>
+      Cola macrotask
+    </div>
+  </div>
+  
+<pre>
+function f(){
+  console.log("1");
+  setTimeout( ()=>{console.log("2");}, 0);
+  console.log("3");
+}
+f();
+</pre>
+    
+<form>
+  <button type="button" id="btnSiguientePasoMacrotask">Siguiente paso</button>
+</form>
 
 
   <h2>Macrotasks y microtasks</h2>

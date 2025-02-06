@@ -116,6 +116,6 @@ const leerCSV = async (url, callback) =>{
 const divResultado = document.querySelector("#divResultado");
 
 document.querySelector("#btnLeerCSV").addEventListener("click", e=>{
-  leerCSV("datos.cs", tratarDatos);
+  leerCSV("datos.csv", tratarDatos);
 });
 

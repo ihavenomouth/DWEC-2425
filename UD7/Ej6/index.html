@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 6</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <script src="code.js" defer></script>
+</head>
+<body>
+  <h1>Ejercicio 6</h1>
+  <p><strong>Ejercicio 6</strong>: Crea una web que al cargar haga una llamada a la API Rest <a href="https://jsonplaceholder.typicode.com/users">https://jsonplaceholder.typicode.com/users</a> que devuelve 10 usuarios y muestra en una tabla de cada usuario el nombre del usuario (el username), el e-mail, el sitio web y la ciudad en la que vive. El <code>id</code> de cada usuario se almacenará en un atributo <code>data-id</code> de la fila.</p>
+
+  <p><strong>Nota</strong>: No almacenes la respuesta en una variable, queremos usar este ejercicio para practicar llamadas al servidor.</p>
+  
+  <p>Cuando se pulse en uno de los usuarios, se recuperará el id del usuario del <code>data-id</code> y se realizará una llamada para recuperar más información de ese usuario concreto. Por ejemplo, si el usuario elegido es el <code>5</code> se llamará a <a href="https://jsonplaceholder.typicode.com/users/5">https://jsonplaceholder.typicode.com/users/5</a></p>
+  
+  <p>Se mostrará en una división abajo el detalle del usuario elegido, se mostrará concretamente el nombre completo y el nombre de su compañía.</p>
+  
+  <h2>Solución</h2>
+
+  <button type="button" id="btnComenzar">Comenzar</button>
+  <table id="tabla"></table>
+  <div id="detalle"></div>
+  
+  
+</body>
+</html>

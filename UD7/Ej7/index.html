@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 6</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <script src="code.js" defer></script>
+</head>
+<body>
+  <h1>Ejercicio 7</h1>
+  <p>E<strong>jemplo 7</strong>: Crea una web que tenga una imagen y un botón Anterior y uno Siguiente.</p>
+
+  <ul>
+    <li>Al cargar la página se generará un número aleatorio entre 0 y 29. El número elegido será el id de la imagen que se mostrará.</li>
+    <li>Para obtener la lista de fotos se hará una petición a <a href="https://picsum.photos/v2/list">https://picsum.photos/v2/list</a> esta lista se guardará en memoria en un array de objetos y cuando se pulse el botón Siguiente se mostrará la siguiente imagen de la lista, con Anterior se mostrará la anterior.</li>
+    <li>Si la imagen es la 29, la siguiente será la imagen 30, el problema es que no tenemos datos de más fotos descargadas, por lo que habrá que pedir la siguiente página: <a href="https://picsum.photos/v2/list?page=2">https://picsum.photos/v2/list?page=2</a> y añadir estos datos a nuestro array. Este comportamiento seguirá siendo necesario cada vez que el id sea divisible por 30. Nota: Los datos de la página 1, sí los tenemos, por lo que si se pulsa el botón Anterior no habrá que pedirlos de nuevo.</li>
+    <li>Si la imagen es la 0, el botón Anterior no hará nada.</li>
+    <li>Además de la imagen, se mostrará también el autor de la misma.</li>
+  </ul>
+
+  <h2>Solución</h2>
+
+  <button type="button" id="btnAnterior">Anterior</button>
+  <button type="button" id="btnSiguiente">Siguiente</button>
+  <div id="imagen" style="min-height:400px"></div>
+  
+  
+</body>
+</html>
