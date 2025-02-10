@@ -1,0 +1,16 @@
+{
+  "name": "servidorweb",
+  "version": "0.0.2",
+  "description": "ksdjas lkdjas lksaj",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch index.js"
+  },
+  "author": "Javier Mancera",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

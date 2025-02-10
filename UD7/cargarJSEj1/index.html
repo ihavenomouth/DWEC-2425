@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <script defer src="code.js"></script>
+</head>
+<body>
+  <h1>Cargar JS (dinámico)</h1>
+  <p>Ejercicio 1: Crea una web que contenga un &lt;input type="number" id="temperatura"&gt;, un botón y una división de resultado. Cuando se pulse el botón cargará dinámicamente un módulo que contendrá tres funciones, usará las funciones con el dato que el usuario haya escrito en el &lt;input&gt; e imprimirá el resultado en la división.</p>
+
+<p>Las tres funciones del módulo serán las siguientes:</p>
+	<ul>
+    <li>celsiusAFahrenheit(temperatura)</li>
+    <li>fahrenheitACelsius(temperatura)</li>
+    <li>celsiusAKelvin(temperatura)</li>
+  </ul>
+
+  <h2>Solución</h2>
+  <form>
+    <input type="number" id="temperatura">
+    <button type="button" id="btnCalcular">Calcular</button>
+  </form>
+  <div id="resultado"></div>
+
+
+</body>
+</html>

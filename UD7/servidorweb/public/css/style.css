@@ -1,0 +1,59 @@
+*,::after,::before{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  max-width: 50rem;
+  accent-color: red;
+}
+
+h1{
+  font-weight: 100;
+  font-size: 5rem;
+  border-bottom: 1px solid black;
+}
+
+
+input, select{
+  border: 1px solid black;
+  border-radius: 7px;
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+  margin-bottom: 2rem;
+  min-width: 12rem;
+}
+
+fieldset{
+  margin-bottom: 2rem;
+}
+
+input[type=radio],input[type=checkbox]{
+  min-width: auto;
+}
+
+select{
+  background-color: pink;
+}
+
+button{
+  background-color: red;
+  color:white;
+  font-weight: bold;
+  font-variant: small-caps;
+  border: 1px solid black;
+  border-radius: 7px;
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+  min-width: 12rem;
+  cursor: pointer;
+  &:hover{
+    filter:brightness(0.8);
+  }
+  &:active{
+    transform: scale(0.9);
+  }
+}
+

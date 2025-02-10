@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="code.js" type="module"></script>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+<body>
+  <h1>Carga de un objeto mediante un módulo</h1>
+  <p>Como un módulo sólo se carga y ejecuta una única vez, un módulo que devuelva un objeto de una clase siempre devolverá el mismo objeto (aunque importemos el módulo varias veces).</p>
+  <p>En el código de ejemplo se importa un par de veces el módulo Punto2D que devuelve un objeto de tipo Punto2D.</p>
+  <p>A continuación se cambian las coordenadas de uno de los dos puntos importados y se imprimen los puntos en la división de abajo para que se vea que son el mismo objeto.</p>
+  <div id="divResultado" class="notice"></div>
+</body>
+</html>
