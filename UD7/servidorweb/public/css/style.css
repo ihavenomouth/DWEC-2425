@@ -39,6 +39,7 @@ select{
 }
 
 button{
+  margin-bottom: 1rem;
   background-color: red;
   color:white;
   font-weight: bold;

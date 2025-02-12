@@ -40,6 +40,29 @@ const enviarJSONPost = async () =>{
 }
 
 
+const enviarFORMDATAPost = async () =>{
+  const frm = document.querySelector("#frm");
+  const objetoFormData = new FormData(frm);
+
+  try{
+    const response = await fetch("/api/producto/addFormDataPOST",{
+      method: "POST",
+      body: objetoFormData
+    });
+    
+    if(!response.ok)
+      throw new Error("No se pudo realizar la petición");
+
+    const resultado = await response.text();
+    divResultado.innerHTML = resultado;
+
+  }
+  catch(error){
+    divResultado.innerHTML = error;
+  }
+}
+
+
 /////////////
 // MAIN
 ////////////
@@ -47,5 +70,9 @@ const divResultado = document.querySelector("#divResultado");
 
 document.querySelector("#btnEnviarPOST").addEventListener("click", e=>{
   enviarJSONPost();
+});
+
+document.querySelector("#btnEnviarFormData").addEventListener("click", e=>{
+  enviarFORMDATAPost();
 });
 

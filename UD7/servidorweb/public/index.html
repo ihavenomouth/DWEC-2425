@@ -10,7 +10,7 @@
 <body>
   <h1>Express</h1>
   <p>Sirviendo ficheros estáticos de Node JS</p>
-  <form action="/api/producto/add" method="GET">
+  <form id="frm" action="/api/producto/add" method="GET">
     <label>Datos: <br>
       <input type="text" name="txtDato" id="txtDato" value="bicicleta">
     </label>
@@ -46,6 +46,8 @@
 
     <button id="btnEnviar">Enviar</button>
     <button  type="button" id="btnEnviarPOST">Enviar POST con JSON</button>
+    <br>
+    <button  type="button" id="btnEnviarFormData">Enviar POST con FormData</button>
   </form>
 
   <div id="divResultado"></div>
