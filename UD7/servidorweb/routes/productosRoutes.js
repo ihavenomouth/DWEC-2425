@@ -1,26 +1,11 @@
 import express from 'express';
+import productoController from '../Controller/ProductoController.js';
 
 const router = express.Router();
 
 
 //GET desde el formulario con un evento submit
-router.get('/add', (req, res) => {
-  //Recuperamos los datos desde la petición
-  const txtDato = req.query.txtDato;
-  const sltValor = req.query.sltValor;
-  const chkAceptar = req.query.chkAceptar;
-  const radio = req.query.radio;
-
-  res.send(`
-    <p>Datos recuperados desde GET con submit</p>
-    <ul>
-      <li>txtDato: ${txtDato}</li>
-      <li>sltValor: ${sltValor}</li>
-      <li>chkAceptar: ${chkAceptar}</li>
-      <li>radio: ${radio}</li>
-    </ul>
-  `);
-})
+router.get('/add', productoController.getFormulario  );
 
 
 //POST desde el botón enviando JSON
