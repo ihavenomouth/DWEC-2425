@@ -21,3 +21,27 @@ app.use('/api/producto', enrutadorProducto)
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`);
 });
+
+
+
+
+
+import db from './database/database.js';
+
+db.any('SELECT * FROM producto')
+  .then(data => {
+	console.log(data);
+  })
+  .catch(error => {
+	console.log(error);
+  });
+
+
+try{
+  const data = await db.one('SELECT * FROM producto where id=$1', 2);
+    console.log(data);
+}
+catch(error){
+  console.error("Error horroroso, perrro sarnoso")
+  console.log(error);
+}

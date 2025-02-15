@@ -12,6 +12,7 @@
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "express": "^4.21.2",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "pg-promise": "^11.10.2"
   }
 }
