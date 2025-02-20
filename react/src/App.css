@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap');
+@import "tailwindcss";
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 * {
@@ -84,13 +87,11 @@ input[type=submit] {
   color: #aaa;
   border-radius: 5px;
   border: 1px solid transparent;
-  /* border-inline: 3px solid #3f5f7f; */
   border-inline: 3px solid #3f6f9f;
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
   font-weight: 500;
   font-family: inherit;
-  /* background-color: #2f4f6f; */
   background-color: #3f5f7f;
   cursor: pointer;
   transition: border-color 0.25s, border-inline 0.25s;
@@ -115,7 +116,6 @@ dialog {
   border-radius: 10px 0px;
   border-color: whitesmoke;
   background-color: #679;
-  /*background: linear-gradient(#679, 80%, #345); */
   text-align: center;
   top: 25%;
 }
@@ -213,4 +213,4 @@ pre{
   padding: 0.5rem;
   background-color: var(--bgdark);
   border-radius: 5px;
-}
+} */
