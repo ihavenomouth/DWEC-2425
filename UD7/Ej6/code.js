@@ -76,8 +76,8 @@ const crearDivisionDetalle = json =>{
 
 
 
-
 document.querySelector("#btnComenzar").addEventListener("click", async e=>{
+
   try{
 
     const response = await fetch("https://jsonplaceholder.typicode.com/users");

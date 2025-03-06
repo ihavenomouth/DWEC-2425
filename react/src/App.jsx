@@ -1,15 +1,18 @@
 import './App.css'
-import Titulo from './Components/Titulo';
-import ListaTareas from './Components/ListaTareas';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
 
 function App() {
 
   return (<>
-    <Titulo/>
-    <ListaTareas>
-      <p>Intentado crear una lista de tareas con React.</p>
-      <p>Esto son hijos de la lista de tareas.</p>
-    </ListaTareas>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<div>Error 404</div>} />
+      </Routes>
+    </BrowserRouter>
   </>
   );
 }
