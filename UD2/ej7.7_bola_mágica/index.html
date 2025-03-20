@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejericico 7.7 - Bola mágica</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="code.js" defer></script>
+</head>
+<body>
+  <h1>Ejercicio 7.7: bola mágica</h1>
+
+  <p>Crea una web que contenga un textbox en el que el usuario escribirá una pregunta y al pulsar un botón, mostrará una posible respuesta al azar (ver la imagen de abajo como ejemplo). Crea al menos 4 posibles respuestas.</p>
+
+  <p>Es decir, cuando se pulse el botón habrá que:</p>
+
+    <ul>
+      <li>Ocultar el número 8 (busca en google cómo se oculta un párrafo).</li>
+      <li>Elegir un número al azar (busca en google cómo se genera un número al azar).</li>
+      <li>Usando condicionales, mostrar un mensaje al azar (si el número aleatorio fue el 1, se mostrará el primer mensaje, si es el 2 el segundo mensaje y así sucesivamente).</li>
+    </ul>
+
+    <form>
+      <label> Pregunta:
+        <input type="text">
+      </label>
+      <button type="button" id="btnBola">Preguntar a la bola</button>
+    </form>
+
+    <br>
+      
+    <div id="bola">
+      <div id="gris">
+         <p id="ocho">8</p>
+         <p id="respuesta"></p>
+      </div>
+   </div>
+
+</body>
+</html>
