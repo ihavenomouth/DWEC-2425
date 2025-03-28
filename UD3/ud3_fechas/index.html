@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <script src="code.js" defer></script>
+</head>
+<body>
+  <h1>Ejercicio 3a fechas 2</h1>
+  <p>Ejercicio 3a fechas 2: Crea una parte de una web de reservas hoteleras que conste de dos una división con <code>id="resultado"</code>, sendos <code>input type="date"</code> (uno para la fecha de entrada y otro para la de salida) y un botón con la etiqueta <em>Reservar</em>. En la web se pedirá al usuario que introduzca las fechas y cuando se pulse el botón con la etiqueta <em>Reservar</em> ocurrirá lo siguiente:</p>
+
+	<ul>
+    <li>Comprueba que los inputs están rellenos, si no es así se mostrará un mensaje de error en la división con <code>id="resultado"</code>.</li>
+    <li>Si están rellenos, se calculará el número de días entre las fechas (los días de reserva) que se mostrarán en la división con <code>id="resultado"</code>.</li>
+    <li>Si la fecha de salida es anterior a la de entrada se mostrará un mensaje de error en la división con <code>id="resultado"</code>.</li>
+  </ul>
+
+<p><strong>Nota:</strong> se puede recuperar la información de un <code>input type="date"</code> directamente como un objeto fecha usando <code>valueAsDate</code> en lugar de value</p>
+
+<h2>Solución</h2>
+
+<form>
+  <label for="fechaEntrada">Fecha de Entrada:</label>
+  <input type="date" id="fechaEntrada" name="fechaEntrada"><br><br>
+  
+  <label for="fechaSalida">Fecha de Salida:</label>
+  <input type="date" id="fechaSalida" name="fechaSalida"><br><br>
+  
+  <button id="btnReservar" type="button">Reservar</button>
+</form>
+
+  <div id="resultado"></div>
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</body>
+</html>

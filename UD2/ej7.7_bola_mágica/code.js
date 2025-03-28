@@ -7,11 +7,20 @@
 // FUNCTIONS
 //////////////////
 
+/**
+ * Devuelve un entero aleatorio entre 0 y el valor del parámetro
+ * @param {*} maxSinIncluir 
+ * @returns número entero aleatorio
+ */
 function getRandomInt(maxSinIncluir) {
   return Math.floor(Math.random()*maxSinIncluir) 
 }
 
 
+
+/**
+ * 
+ */
 function preguntarALaBola(){
   document.querySelector("#ocho").innerText="";
   const resupuesta = document.querySelector("#respuesta");
@@ -33,7 +42,6 @@ function preguntarALaBola(){
   else if(numero===4){
     resupuesta.innerHTML="Dudo que ocurra";
   }
-  
 }
 
 
@@ -42,5 +50,7 @@ function preguntarALaBola(){
 /////////////////
 // MAIN
 ////////////////
+
+// Añadimos un eventListener al botón de la bola
 document.querySelector("#btnBola").addEventListener("click", preguntarALaBola);
 
