@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notas con localStorage</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <script src="code.js" defer></script>
+</head>
+<body>
+  <h1>Ejercicio 3b4</h1>
+  <p><strong>Ejercicio 3b4</strong>: Crea una web que contenga un cuadro de texto, un textarea y un botón de guardar. Cada vez que se pulse el botón de guardar se guardará el contenido del textarea en una nota con el título escrito en el cuadro de texto. Añade un botón de cargar que sirva para recuperar la nota cuyo título sea el que aparece en el cuadro de texto.</p>
+
+  <p>Ampliación: Si ya existe un texto con ese título, avisa al usuario para saber si quiere sobreescribirlo.</p>
+  
+  <p>Ampliación 2: Añade un botón que permita eliminar un texto indicando su título. </p>
+
+  <h2>Solución</h2>
+  <form>
+    <label for="txtTitulo">Título</label>
+    <input type="text" id="txtTitulo">
+    
+    <label for="txtNota">Nota</label>
+    <textarea id="txtNota" rows="10"></textarea>
+
+    <button type="button" id="btnGuardar"> Guardar </button>
+    <button type="button" id="btnCargar"> Cargar </button>
+    <button type="button" id="btnEliminar"> Eliminar </button>
+  </form>
+
+  <p></p>
+  <p></p>
+  <p></p>
+</body>
+</html>
